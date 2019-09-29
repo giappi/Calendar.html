@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- Copyright by Giappi © 2019 -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calendar 2019</title>
+</head>
+<body contenteditable="true">
+    <div class="document" >
+        <div class="content" >
+            <div class="month-container" >
+                <div class="section-container" >
+                    <div class="section" >
+                        <div class="section-month-title" >Juanary</div>
+                        <div class="section-month-content" >
+                            <table class="month-table" >
+                                <tr class="month-row header">
+                                    <td class="month-cell header t2" >T2</td>
+                                    <td class="month-cell header t3" >T3</td>
+                                    <td class="month-cell header t4" >T4</td>
+                                    <td class="month-cell header t5" >T5</td>
+                                    <td class="month-cell header t6" >T6</td>
+                                    <td class="month-cell header t7" >T7</td>
+                                    <td class="month-cell header cn" >CN</td>
+                                </tr>
+                                <tr class="month-row">
+                                    <td class="month-cell t2 N" >30</td>
+                                    <td class="month-cell t3 N" >31</td>
+                                    <td class="month-cell t4" >1</td>
+                                    <td class="month-cell t5" >2</td>
+                                    <td class="month-cell t6" >3</td>
+                                    <td class="month-cell t7" >4</td>
+                                    <td class="month-cell cn" >5</td>
+                                </tr>
+                                <tr class="month-row">
+                                    <td class="month-cell t2" >6</td>
+                                    <td class="month-cell t3" >7</td>
+                                    <td class="month-cell t4" >8</td>
+                                    <td class="month-cell t5" >9</td>
+                                    <td class="month-cell t6" >10</td>
+                                    <td class="month-cell t7" >11</td>
+                                    <td class="month-cell cn" >12</td>
+                                </tr>
+                                <tr class="month-row">
+                                    <td class="month-cell t2" >13</td>
+                                    <td class="month-cell t3" >14</td>
+                                    <td class="month-cell t4" >15</td>
+                                    <td class="month-cell t5" >16</td>
+                                    <td class="month-cell t6" >17</td>
+                                    <td class="month-cell t7" >18</td>
+                                    <td class="month-cell cn" >19</td>
+                                </tr>
+                                <tr class="month-row">
+                                    <td class="month-cell t2" >20</td>
+                                    <td class="month-cell t3" >21</td>
+                                    <td class="month-cell t4" >22</td>
+                                    <td class="month-cell t5" >23</td>
+                                    <td class="month-cell t6" >24</td>
+                                    <td class="month-cell t7" >25</td>
+                                    <td class="month-cell cn" >26</td>
+                                </tr>
+                                <tr class="month-row">
+                                    <td class="month-cell t2" >27</td>
+                                    <td class="month-cell t3" >28</td>
+                                    <td class="month-cell t4" >29</td>
+                                    <td class="month-cell t5" >30</td>
+                                    <td class="month-cell t6" >31</td>
+                                    <td class="month-cell t7 N" >1</td>
+                                    <td class="month-cell cn N" >2</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container" >
+                    <div class="section" >
+                        <div class="section-month-title" >February</div>
+                        <div class="section-month-content" >
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container" >
+                    <div class="section" >
+                        <div class="section-month-title" >March</div>
+                        <div class="section-month-content" >
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container" >
+                    <div class="section" >
+                        <div class="section-month-title" >April</div>
+                        <div class="section-month-content" >
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container" >
+                    <div class="section" >
+                        <div class="section-month-title" >May</div>
+                        <div class="section-month-content" >
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container" >
+                    <div class="section" >
+                        <div class="section-month-title" >June</div>
+                        <div class="section-month-content" >
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container" >
+                    <div class="section" >
+                        <div class="section-month-title" >July</div>
+                        <div class="section-month-content" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;" ></div>
+    </div>
+    <style>
+
+    @page  
+    {
+        /* auto is the initial value */ 
+        size: A4;
+        /* this affects the margin in the printer settings */ 
+        margin: 0mm 0mm 0mm 0mm;
+        padding: 0mm 0mm 0mm 0mm;
+
+    }
+
+    @media print
+    {
+        .page
+        {
+            margin: 0mm;
+            width: 210mm;
+            page-break-after: always;
+        }
+    }
+
+    *
+    {
+        box-sizing: border-box; /* size of a element includes border and its padding*/
+    }
+
+    *:hover
+    {
+        outline: 0.75pt dotted #FF0000;
+        position: relative;
+        z-index: 1;
+    } /**/
+
+
+    body
+    {
+        background-color: #000011;
+        font-family: "Segoe UI";
+        font-size: 9pt;
+        margin: 0;
+        padding: 0;
+        width: 210mm; /* A4 size*/
+        height: 297mm;  /* A4 size*/
+        margin: auto auto;
+        line-height: normal;
+        word-spacing: normal;
+        /* text-shadow: 0 0 0.75pt #808080; */
+    }
+
+    a.hiddenlink
+    {
+        text-decoration: none;
+        color: inherit;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: #AAB0B0B0;
+    }
+
+    a.hiddenlink:hover
+    {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+
+    }
+
+    .document
+    {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: #444444;
+    }
+
+    .symbol
+    {
+        font-family: 'Segoe UI Symbol';
+        /*font-size: 9.5pt; /**/
+    }
+
+    .content
+    {
+        background-color: #EEEEEE;
+    }
+
+    .content-left
+    {
+        width: 33%;
+        float: left;
+        padding: 20pt;
+        padding-right: 6pt;
+        padding-left: 20pt;
+    }
+
+    .month-container
+    {
+        width: 100%;
+        float: left;
+        padding: 20pt;
+        padding-left: 20pt;
+        padding-right: 20pt;
+    }
+
+
+    .section-container
+    {
+        width: 33.3333333333%;
+        float: left;
+    }
+
+    .section
+    {
+        min-height: 40;
+        background-color: white;
+        border: #B0B0B0 0.75pt solid;
+        border-radius: 2.25pt;
+        padding: 0;
+        padding-bottom: 3.75pt;
+        color: #404040;
+        box-shadow: 0 0 2.5pt 0 #AAAAAA;/*, 0 0 5pt 0 #CCCCCC, 0 0 7pt 0 #CCCCCC; /**/
+        margin: 3%;
+    }
+
+    .section + .section
+    {
+        margin-left: 12pt;
+    }
+
+    .section-title
+    {
+        padding: 3.75pt;
+        font-weight: bold;
+        color: #76923c;
+        font-size: 10pt;
+    }
+
+    .section-month-title
+    {
+        padding: 3.75pt;
+        padding-left: 5.25pt;
+        font-weight: bold;
+        color: #365f91;
+        font-size: 13pt;
+    }
+
+    .section-title-icon
+    {
+        vertical-align: bottom;
+        fill: #76923c;
+    }
+
+    .section-month-content
+    {
+        padding-left: 3.75pt;
+        padding-right: 3.75pt;
+        text-align: justify;
+    }
+
+    .month-table
+    {
+        width: 100%;
+    }
+
+    .month-table .month-row .month-cell
+    {
+        text-align: right;
+    }
+
+    .month-table .month-row .month-cell.header
+    {
+        font-weight: bold;
+    }
+
+    .month-table .month-row .month-cell.t7, .month-table .month-row .month-cell.cn
+    {
+        color: red;
+    }
+
+    .month-table .month-row .month-cell.N
+    {
+        color: #CCCCCC;
+    }
+
+    .month-table .month-row .month-cell.t7.N, .month-table .month-row .month-cell.cn.N
+    {
+        color: #FFBBBB;
+    }
+
+    </style>
+</body>
+</html>
