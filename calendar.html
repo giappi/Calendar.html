@@ -81,8 +81,8 @@
                 <div style="clear: both;" ></div>
             </div>
             <div class="bottom-container" >
-                <div class="section" >
-                    &nbsp;<br />
+                <div class="section" style="padding-left: 7pt; padding: 3pt;" >
+                    <div style="border:1px solid #FF0000; border-radius: 50%; padding-left: 5px; padding-right: 5px; width: 20pt; text-align: center;">31</div>
                     &nbsp;<br />
                     &nbsp;<br />
                     &nbsp;<br />
@@ -304,6 +304,23 @@
         color: #FFBBBB;
     }
 
+    .month-cell.holiday
+    {
+        box-sizing: border-box;
+        outline: 2px solid #FF0033;
+    }
+
+    .month-cell.N.holiday
+    {
+        box-sizing: border-box;
+        outline: 2px solid #FFBBBB;
+    }
+
+    .relative
+    {
+        position: relative;
+    }
+
     </style>
 
     <script>
@@ -313,6 +330,45 @@
         let monthNameList       = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"];
         let classWdList         = {'0' : "cn",'1': "t2",'2': "t3",'3': "t4",'4': "t5",'5': "t6",'6': "t7"};
+        let holidayList         = 
+        {
+            "1" :
+            [
+                {
+                    "date": [1],
+                    "event": "Solar New Year"
+                },
+                {
+                    "date": [24, 25, 26, 27, 28, 29],
+                    "event": "Tết"
+                }
+            ],
+            "4" :
+            [
+                {
+                    "date": [2],
+                    "event": "Giỗ tổ Hùng Vương"
+                },
+                {
+                    "date": [30],
+                    "event": "Ngày Thống Nhất"
+                }
+            ],
+            "5" :
+            [
+                {
+                    "date": [1],
+                    "event": "Quốc tế lao động"
+                }
+            ],
+            "9" :
+            [
+                {
+                    "date": [2],
+                    "event": "Ngày Quốc Khánh"
+                }
+            ]
+        };
 
         monthsContainer.removeChild(sectionContainer);
 
@@ -333,6 +389,22 @@
                 if(date.getMonth() != thisMonth)
                 {
                     dayCellList[i].classList.add("N");
+                }
+                // holiday
+                if( date.getMonth() == thisMonth
+                    && holidayList[date.getMonth()+1]
+                    && holidayList[date.getMonth()+1].some(e => e.date.includes(date.getDate()))
+                )
+                {
+                    dayCellList[i].classList.add("relative");
+                    //dayCellList[i].classList.add("holiday");
+                    let tmpDiv = document.createElement("div");
+                    tmpDiv.style = "border:1px solid #FF0000; position:absolute;border-radius: 50%;left: 30%;width: 90%;";
+                    tmpDiv.innerHTML = "&nbsp;";
+                    let movedContent = dayCellList[i].innerHTML;
+                    dayCellList[i].innerHTML = "";
+                    dayCellList[i].appendChild(tmpDiv);
+                    dayCellList[i].innerHTML += movedContent;
                 }
                 date.setDate(date.getDate() + 1);
             }
